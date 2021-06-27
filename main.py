@@ -2,6 +2,7 @@
 
 import streamlit as st
 import pandas as pd
+import base64
 #import statsmodels.api as sm
 
 st.set_page_config(page_title="期末考頁面")
@@ -87,7 +88,17 @@ submit = submit.append({'題號':18,'答案':Q18},ignore_index=True)
 submit = submit.append({'題號':19,'答案':Q19},ignore_index=True)
 submit = submit.append({'題號':20,'答案':Q20},ignore_index=True)
 
+def csv_downloader(data):
+  
+  csvfile = data.to_csv()
+  b64 = base64.b64encode(csvfile.encode()).decode()
+  new_filename = "答案_{}_.csv".format(name)
+  st.markdown(" #### Download File #### ")
+  href = f'<a href="data:file/csv;base64,{b64} download="{new_filename}">Click here</a>'
+  st.markdown(href,unsafe_allow_html=True)
+
 if st.button('檢查提交答案'):
-  st.write(submit)
-st.markdown('<a href="mailto:daniel40307@yahoo.com.tw">Contact us !</a>', unsafe_allow_html=True)
+  st.table(submit)
+  csv_downloader(submit)
+#st.markdown('<a href="mailto:daniel40307@yahoo.com.tw">Contact us !</a>', unsafe_allow_html=True)
 #submit.to_csv("./"+path+"0901.csv",encoding="utf-8")
