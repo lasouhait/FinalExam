@@ -14,6 +14,6 @@ answer = pd.read_csv("./"+path+"/正解.csv")
 
 st.write(answer)
 
-st.write("./"+path+"/1.jpg")
+st.image("./"+path+"/1.jpg")
 
 Q1 = st.radio("1.",('A','B','C','D'))
