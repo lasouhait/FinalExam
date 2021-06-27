@@ -2,7 +2,7 @@
 
 import streamlit as st
 import pandas as pd
-import statsmodels.api as sm
+#import statsmodels.api as sm
 
 st.set_page_config(page_title="期末考頁面")
 st.title("109年度第二學期期末考")
