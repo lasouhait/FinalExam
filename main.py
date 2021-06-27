@@ -9,7 +9,11 @@ st.title("109年度第二學期期末考")
 #st.write("All information is for personal use, and is not aimed to provide suggestion.")
 #page_nav = st.sidebar.radio("請選取頁面",["營運概況","人力資訊","董監酬勞揭露","股價資訊","金融統計"])
 
-path="./國二下/"
-answer = pd.read_csv(path+"正解.csv")
+path="國二下"
+answer = pd.read_csv("./"+path+"/正解.csv")
 
 st.write(answer)
+
+st.write("./"+path+"/1.jpg")
+
+Q1 = st.radio("1.",('A','B','C','D'))
