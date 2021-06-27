@@ -87,7 +87,7 @@ submit = submit.append({'題號':18,'答案':Q18},ignore_index=True)
 submit = submit.append({'題號':19,'答案':Q19},ignore_index=True)
 submit = submit.append({'題號':20,'答案':Q20},ignore_index=True)
 
-  if st.button('檢查提交答案'):
-    st.write(submit)
+if st.button('檢查提交答案'):
+  st.write(submit)
 st.markdown('<a href="mailto:daniel40307@yahoo.com.tw">Contact us !</a>', unsafe_allow_html=True)
 #submit.to_csv("./"+path+"0901.csv",encoding="utf-8")
