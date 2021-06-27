@@ -43,6 +43,25 @@ st.image("./"+path+"/1011.jpg")
 Q10 = st.radio("10.",('A','B','C','D'))
 Q11 = st.radio("11.",('A','B','C','D'))
 
+st.image("./"+path+"/1213.jpg")
+Q12 = st.radio("12.",('A','B','C','D'))
+Q13 = st.radio("13.",('A','B','C','D'))
+
+st.image("./"+path+"/14.jpg")
+Q14 = st.radio("14.",('A','B','C','D'))
+
+st.image("./"+path+"/15.jpg")
+Q15 = st.radio("15.",('A','B','C','D'))
+
+st.image("./"+path+"/1617.jpg")
+Q16 = st.radio("16.",('A','B','C','D'))
+Q17 = st.radio("17.",('A','B','C','D'))
+
+st.image("./"+path+"/1819.jpg")
+Q18 = st.radio("18.",('A','B','C','D'))
+Q19 = st.radio("19.",('A','B','C','D'))
+
+
 submit = pd.DataFrame(columns=['題號','答案'])
 submit = submit.append({'題號':1,'答案':Q1},ignore_index=True)
 submit = submit.append({'題號':2,'答案':Q2},ignore_index=True)
@@ -55,6 +74,14 @@ submit = submit.append({'題號':8,'答案':Q8},ignore_index=True)
 submit = submit.append({'題號':9,'答案':Q9},ignore_index=True)
 submit = submit.append({'題號':10,'答案':Q10},ignore_index=True)
 submit = submit.append({'題號':11,'答案':Q11},ignore_index=True)
+submit = submit.append({'題號':12,'答案':Q12},ignore_index=True)
+submit = submit.append({'題號':13,'答案':Q13},ignore_index=True)
+submit = submit.append({'題號':14,'答案':Q14},ignore_index=True)
+submit = submit.append({'題號':15,'答案':Q15},ignore_index=True)
+submit = submit.append({'題號':16,'答案':Q16},ignore_index=True)
+submit = submit.append({'題號':17,'答案':Q17},ignore_index=True)
+submit = submit.append({'題號':18,'答案':Q18},ignore_index=True)
+submit = submit.append({'題號':19,'答案':Q19},ignore_index=True)
 
 st.write(submit)
 st.markdown('<a href="mailto:daniel40307@yahoo.com.tw">Contact us !</a>', unsafe_allow_html=True)
