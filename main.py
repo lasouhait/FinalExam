@@ -2,7 +2,6 @@
 
 import streamlit as st
 import pandas as pd
-import base64
 #import statsmodels.api as sm
 
 st.set_page_config(page_title="期末考頁面")
@@ -13,6 +12,7 @@ st.title("109年度第二學期期末考")
 path="國二下"
 answer = pd.read_csv("./"+path+"/正解.csv")
 
+name = st.text_input("輸入姓名")
 #st.write(answer)
 
 if path=="國二下":
@@ -91,10 +91,10 @@ submit = submit.append({'題號':20,'答案':Q20},ignore_index=True)
 def csv_downloader(data):
   
   csvfile = data.to_csv()
-  b64 = base64.b64encode(csvfile.encode()).decode()
+  #b64 = base64.b64encode(csvfile.encode()).decode()
   new_filename = "答案_{}_.csv".format(name)
   st.markdown(" #### Download File #### ")
-  href = f'<a href="data:file/csv;base64,{b64} download="{new_filename}">Click here</a>'
+  href = f'<a href="data:file/csv;base64,{csvfile} download="{new_filename}">Click here</a>'
   st.markdown(href,unsafe_allow_html=True)
 
 if st.button('檢查提交答案'):
