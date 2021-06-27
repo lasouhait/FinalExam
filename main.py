@@ -94,7 +94,7 @@ def csv_downloader(data):
   #b64 = base64.b64encode(csvfile.encode()).decode()
   new_filename = "答案_{}_.csv".format(name)
   st.markdown(" #### Download File #### ")
-  href = f'<a href="data:file/csv;base64,{csvfile} download="{new_filename}">Click here</a>'
+  href = f'<a href="data:file/csv;base64,{csvfile} download={new_filename}">Click here</a>'
   st.markdown(href,unsafe_allow_html=True)
 
 if st.button('檢查提交答案'):
