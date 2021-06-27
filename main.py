@@ -99,6 +99,8 @@ def csv_downloader(data):
 
 if st.button('檢查提交答案'):
   st.table(submit)
-  csv_downloader(submit)
+  csvfile = submit.to_csv(index=False)
+  st.markdown(f'<a href="data:file/csv;base64,{csvfile}">下載答案</a>',unsafe_allow_html=True)
+  #csv_downloader(submit)
 #st.markdown('<a href="mailto:daniel40307@yahoo.com.tw">Contact us !</a>', unsafe_allow_html=True)
 #submit.to_csv("./"+path+"0901.csv",encoding="utf-8")
