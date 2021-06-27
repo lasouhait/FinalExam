@@ -43,5 +43,5 @@ submit = pd.DataFrame(['題號','答案'])
 submit = submit.append([1,Q1])
 submit = submit.append([2,Q2])
 
-st.table(submit)
-st.to_csv("./"+path+"0901.csv",encoding="utf-8")
+st.write(submit)
+df.to_csv("./"+path+"0901.csv",encoding="utf-8")
