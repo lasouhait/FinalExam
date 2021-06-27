@@ -57,4 +57,5 @@ submit = submit.append({'題號':10,'答案':Q10},ignore_index=True)
 submit = submit.append({'題號':11,'答案':Q11},ignore_index=True)
 
 st.write(submit)
-submit.to_csv("./"+path+"0901.csv",encoding="utf-8")
+st.markdown('<a href="mailto:daniel40307@yahoo.com.tw">Contact us !</a>', unsafe_allow_html=True)
+#submit.to_csv("./"+path+"0901.csv",encoding="utf-8")
