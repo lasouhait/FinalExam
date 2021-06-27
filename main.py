@@ -90,11 +90,11 @@ submit = submit.append({'題號':20,'答案':Q20},ignore_index=True)
 
 def csv_downloader(data):
   
-  csvfile = data.to_csv()
+  csvfile = data.to_csv(index=False)
   #b64 = base64.b64encode(csvfile.encode()).decode()
   new_filename = "答案_{}_.csv".format(name)
   st.markdown(" #### Download File #### ")
-  href = f'<a href="data:file/csv;base64,{csvfile} download={new_filename}">Click here</a>'
+  href = f'<a href="data:file/csv;base64,{csvfile}">Click here</a>'
   st.markdown(href,unsafe_allow_html=True)
 
 if st.button('檢查提交答案'):
