@@ -40,8 +40,8 @@ st.image("./"+path+"/9.jpg")
 Q9 = st.radio("9.",('A','B','C','D'))
 
 submit = pd.DataFrame(columns=['題號','答案'])
-submit = submit.append([1,Q1])
-submit = submit.append([2,Q2])
+submit = submit.append({'題號':1,'答案':Q1})
+submit = submit.append({'題號':2,'答案':Q2})
 
 st.write(submit)
 submit.to_csv("./"+path+"0901.csv",encoding="utf-8")
