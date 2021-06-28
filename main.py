@@ -6,10 +6,8 @@ import pandas as pd
 
 st.set_page_config(page_title="期末考頁面")
 st.title("109年度第二學期期末考")
-#st.write("All information is for personal use, and is not aimed to provide suggestion.")
-#page_nav = st.sidebar.radio("請選取頁面",["營運概況","人力資訊","董監酬勞揭露","股價資訊","金融統計"])
 
-path="國二下"
+path="高二下"
 answer = pd.read_csv("./"+path+"/正解.csv")
 
 name = st.text_input("輸入姓名")
@@ -66,28 +64,67 @@ if path=="國二下":
   st.image("./"+path+"/20.jpg")
   Q20 = st.radio("20.",('A','B','C','D'))
 
-submit = pd.DataFrame(columns=['題號','答案'])
-submit = submit.append({'題號':1,'答案':Q1},ignore_index=True)
-submit = submit.append({'題號':2,'答案':Q2},ignore_index=True)
-submit = submit.append({'題號':3,'答案':Q3},ignore_index=True)
-submit = submit.append({'題號':4,'答案':Q4},ignore_index=True)
-submit = submit.append({'題號':5,'答案':Q5},ignore_index=True)
-submit = submit.append({'題號':6,'答案':Q6},ignore_index=True)
-submit = submit.append({'題號':7,'答案':Q7},ignore_index=True)
-submit = submit.append({'題號':8,'答案':Q8},ignore_index=True)
-submit = submit.append({'題號':9,'答案':Q9},ignore_index=True)
-submit = submit.append({'題號':10,'答案':Q10},ignore_index=True)
-submit = submit.append({'題號':11,'答案':Q11},ignore_index=True)
-submit = submit.append({'題號':12,'答案':Q12},ignore_index=True)
-submit = submit.append({'題號':13,'答案':Q13},ignore_index=True)
-submit = submit.append({'題號':14,'答案':Q14},ignore_index=True)
-submit = submit.append({'題號':15,'答案':Q15},ignore_index=True)
-submit = submit.append({'題號':16,'答案':Q16},ignore_index=True)
-submit = submit.append({'題號':17,'答案':Q17},ignore_index=True)
-submit = submit.append({'題號':18,'答案':Q18},ignore_index=True)
-submit = submit.append({'題號':19,'答案':Q19},ignore_index=True)
-submit = submit.append({'題號':20,'答案':Q20},ignore_index=True)
+  submit = pd.DataFrame(columns=['題號','答案'])
+  submit = submit.append({'題號':1,'答案':Q1},ignore_index=True)
+  submit = submit.append({'題號':2,'答案':Q2},ignore_index=True)
+  submit = submit.append({'題號':3,'答案':Q3},ignore_index=True)
+  submit = submit.append({'題號':4,'答案':Q4},ignore_index=True)
+  submit = submit.append({'題號':5,'答案':Q5},ignore_index=True)
+  submit = submit.append({'題號':6,'答案':Q6},ignore_index=True)
+  submit = submit.append({'題號':7,'答案':Q7},ignore_index=True)
+  submit = submit.append({'題號':8,'答案':Q8},ignore_index=True)
+  submit = submit.append({'題號':9,'答案':Q9},ignore_index=True)
+  submit = submit.append({'題號':10,'答案':Q10},ignore_index=True)
+  submit = submit.append({'題號':11,'答案':Q11},ignore_index=True)
+  submit = submit.append({'題號':12,'答案':Q12},ignore_index=True)
+  submit = submit.append({'題號':13,'答案':Q13},ignore_index=True)
+  submit = submit.append({'題號':14,'答案':Q14},ignore_index=True)
+  submit = submit.append({'題號':15,'答案':Q15},ignore_index=True)
+  submit = submit.append({'題號':16,'答案':Q16},ignore_index=True)
+  submit = submit.append({'題號':17,'答案':Q17},ignore_index=True)
+  submit = submit.append({'題號':18,'答案':Q18},ignore_index=True)
+  submit = submit.append({'題號':19,'答案':Q19},ignore_index=True)
+  submit = submit.append({'題號':20,'答案':Q20},ignore_index=True)
 
+elif path=="高二下":
+  st.image("./"+path+"/1.jpg")
+  Q1 = st.radio("1.",('A','B','C','D','E'))
+
+  st.image("./"+path+"/2.jpg")
+  Q2 = st.radio("2.",('A','B','C','D','E'))
+
+  st.image("./"+path+"/3.jpg")
+  Q3 = st.radio("3.",('A','B','C','D','E'))
+
+  st.image("./"+path+"/4.jpg")
+  Q4 = st.radio("4.",('A','B','C','D','E'))
+
+  st.image("./"+path+"/5.jpg")
+  Q5 = st.radio("5.",('A','B','C','D','E'))
+
+  st.image("./"+path+"/6.jpg")
+  Q6 = st.radio("6.",('A','B','C','D'))
+  
+  st.image("./"+path+"/7.jpg")
+  Q7 = st.radio("7.",('A','B','C','D'))
+
+  st.image("./"+path+"/8.jpg")
+  Q8 = st.radio("8.",('A','B','C','D','E'))
+
+  st.image("./"+path+"/9.jpg")
+  Q9 = st.radio("9.",('A','B','C','D','E'))
+
+  submit = pd.DataFrame(columns=['題號','答案'])
+  submit = submit.append({'題號':1,'答案':Q1},ignore_index=True)
+  submit = submit.append({'題號':2,'答案':Q2},ignore_index=True)
+  submit = submit.append({'題號':3,'答案':Q3},ignore_index=True)
+  submit = submit.append({'題號':4,'答案':Q4},ignore_index=True)
+  submit = submit.append({'題號':5,'答案':Q5},ignore_index=True)
+  submit = submit.append({'題號':6,'答案':Q6},ignore_index=True)
+  submit = submit.append({'題號':7,'答案':Q7},ignore_index=True)
+  submit = submit.append({'題號':8,'答案':Q8},ignore_index=True)
+  submit = submit.append({'題號':9,'答案':Q9},ignore_index=True)
+  
 def csv_downloader(data):
   
   csvfile = data.to_csv(index=False)
