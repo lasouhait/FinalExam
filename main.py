@@ -8,7 +8,7 @@ st.set_page_config(page_title="期末考頁面")
 st.title("109年度第二學期期末考")
 
 path="高二下"
-answer = pd.read_csv("./"+path+"/正解.csv")
+#answer = pd.read_csv("./"+path+"/正解.csv")
 
 name = st.text_input("輸入姓名")
 #st.write(answer)
